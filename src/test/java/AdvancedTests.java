@@ -9,22 +9,29 @@ import org.openqa.selenium.support.ui.Select;
 
 // Zmiana testowa
 
-public class JunitTests {
+public class AdvancedTests {
 
     @Test
-    public void SeleniumBasicTest() throws InterruptedException {
+    public void SeleniumBasicTest1() throws InterruptedException {
 //         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         WebDriverManager.chromedriver().setup();
-
         ChromeOptions options = new ChromeOptions();
         options.addArguments("window-position=2000,0");
-
         ChromeDriver driver = new ChromeDriver(options);
-
         driver.manage().window().maximize();
-
         driver.get("");
+//        driver.quit();
+    }
 
+    @Test
+    public void SeleniumBasicTest2() throws InterruptedException {
+//         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("window-position=2000,0");
+        ChromeDriver driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
+        driver.get("");
 //        driver.quit();
     }
 }
