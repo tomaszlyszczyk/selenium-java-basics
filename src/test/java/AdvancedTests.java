@@ -27,11 +27,32 @@ public class AdvancedTests {
     @Test
     public void SeleniumBasicTest1() throws InterruptedException {
         driver.get("https://aniagotuje.pl/");
+
+
+
+
+        // wejsc w przepis
+
+        // wypisac liczbe glosow
+
+        // napisac komentarz - tylko wpisac tekst, nie zatwierdzac
+
     }
 
     @Test
     public void SeleniumBasicTest2() throws InterruptedException {
         driver.get("https://www.x-kom.pl/");
+
+        // wyszukac produkt
+
+        // wejsc na strone produktu
+
+        // dodac do koszyka
+
+        // przejsc do koszyka - UWAGA pop-up
+
+        // przejsc do dostawy
+
     }
 
     @AfterEach
