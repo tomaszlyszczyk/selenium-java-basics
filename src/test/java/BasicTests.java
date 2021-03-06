@@ -29,6 +29,12 @@ public class BasicTests {
         WebElement przepisy = driver.findElement(By.xpath("//*[@id=\"logo-headline\"]/div[2]"));
         System.out.println(przepisy.getText());
 
+        WebElement tytulzlinku = driver.findElement();
+        String abc = tytulzlinku.getAttribute();
+        System.out.println(abc);
+
+
+
 //        driver.quit();
     }
 }
