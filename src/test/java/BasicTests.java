@@ -1,9 +1,11 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
 
 // Zmiana testowa
 
@@ -49,8 +51,20 @@ public class BasicTests {
 
         // kliknij checkbox
 
+        // wybierz opcje z menu
+        Select experience = new Select(driver.findElement(By.cssSelector("#select-menu")));
+//        experience.selectByIndex(2);
+//        experience.selectByValue("3");
+          experience.selectByVisibleText("5-9");
+
+
+
+        // wpisz date
+        driver.findElement(By.id("datepicker")).sendKeys("05/12/2000" + Keys.ENTER);
 
         // kliknij submit
+
+
 
 
 
