@@ -17,8 +17,8 @@ import java.util.concurrent.TimeUnit;
 public class BasicTests {
 
     @Test
-    public void SeleniumBasicTest() {
-//         System.setProperty("webdriver.chrome.driver", "to_byl_chromedriver.exe");
+    public void SeleniumBasicTest() throws InterruptedException {
+//         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
@@ -45,10 +45,9 @@ public class BasicTests {
         driver.get("http://formy-project.herokuapp.com/form");
 
         // explicit wait - lokalny, z konkretnym warunkiem
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("super grupa")));
-
-        driver.findElement(By.id("super grupa")).click();
+//        WebDriverWait wait = new WebDriverWait(driver, 10);
+//        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("super grupa")));
+//        driver.findElement(By.id("super grupa")).click();
 
 
         // zloklalizowanie pol na imie, nazwisko i prace
@@ -60,6 +59,8 @@ public class BasicTests {
         imie.sendKeys("Tomek");
         nazwisko.sendKeys("Lyszczyk");
         praca.sendKeys("tester");
+
+        Thread.sleep(5000);
 
         // kliknij radio button
         driver.findElement(By.id("radio-button-2")).click();
