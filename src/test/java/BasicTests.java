@@ -5,7 +5,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 // Zmiana testowa
 
@@ -20,6 +25,8 @@ public class BasicTests {
         options.addArguments("window-position=2000,0");
 
         ChromeDriver driver = new ChromeDriver(options);
+        // implicit wait - globalny tlyko na find element
+//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
 //        driver.navigate().to("https://aniagotuje.pl/");
@@ -36,6 +43,14 @@ public class BasicTests {
 //        System.out.println(abc);
 
         driver.get("http://formy-project.herokuapp.com/form");
+
+        // explicit wait - lokalny, z konkretnym warunkiem
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("super grupa")));
+
+        driver.findElement(By.id("super grupa")).click();
+
+
         // zloklalizowanie pol na imie, nazwisko i prace
 
         WebElement imie = driver.findElement(By.id("first-name"));
@@ -56,8 +71,6 @@ public class BasicTests {
 //        experience.selectByIndex(2);
 //        experience.selectByValue("3");
           experience.selectByVisibleText("5-9");
-
-
 
         // wpisz date
         driver.findElement(By.id("datepicker")).sendKeys("05/12/2000" + Keys.ENTER);
