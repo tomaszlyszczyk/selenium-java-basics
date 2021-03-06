@@ -44,6 +44,13 @@ public class BasicTests {
         nazwisko.sendKeys("Lyszczyk");
         praca.sendKeys("tester");
 
+        // kliknij radio button
+        driver.findElement(By.id("radio-button-2")).click();
+
+        // kliknij checkbox
+
+
+        // kliknij submit
 
 
 
