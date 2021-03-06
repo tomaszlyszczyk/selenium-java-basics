@@ -37,8 +37,13 @@ public class BasicTests {
         // zloklalizowanie pol na imie, nazwisko i prace
 
         WebElement imie = driver.findElement(By.id("first-name"));
+        // input[id='last-name']
         WebElement nazwisko = driver.findElement(By.cssSelector("#last-name"));
         WebElement praca = driver.findElement(By.xpath("//form/div/div[3]/input"));
+        imie.sendKeys("Tomek");
+        nazwisko.sendKeys("Lyszczyk");
+        praca.sendKeys("tester");
+
 
 
 
