@@ -19,8 +19,8 @@ public class AdvancedTests {
         options.addArguments("window-position=2000,0");
         ChromeDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        driver.get("");
-//        driver.quit();
+        driver.get("https://aniagotuje.pl/");
+        driver.quit();
     }
 
     @Test
@@ -31,7 +31,7 @@ public class AdvancedTests {
         options.addArguments("window-position=2000,0");
         ChromeDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        driver.get("");
-//        driver.quit();
+        driver.get("https://www.x-kom.pl/");
+        driver.quit();
     }
 }
