@@ -27,8 +27,7 @@ public class BasicTests {
 //        System.out.println(s);
 //
 //        WebElement przepisy = driver.findElement(By.xpath("//*[@id=\"logo-headline\"]/div[2]"));
-//        System.out.println(przepisy.getText());
-//
+//        System.out.println(przepisy.getText());//
 //
 //        WebElement tytulzlinku = driver.findElement();
 //        String abc = tytulzlinku.getAttribute();
@@ -37,6 +36,9 @@ public class BasicTests {
         driver.get("http://formy-project.herokuapp.com/form");
         // zloklalizowanie pol na imie, nazwisko i prace
 
+        WebElement imie = driver.findElement(By.id("first-name"));
+        WebElement nazwisko = driver.findElement(By.cssSelector("#last-name"));
+        WebElement praca = driver.findElement(By.xpath("//form/div/div[3]/input"));
 
 
 
