@@ -1,5 +1,7 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -19,6 +21,13 @@ public class BasicTests {
         driver.manage().window().maximize();
 
         driver.navigate().to("https://aniagotuje.pl/");
+
+        WebElement tytul = driver.findElement(By.className("logo-caption"));
+        String s = tytul.getText();
+        System.out.println(s);
+
+        WebElement przepisy = driver.findElement(By.xpath("//*[@id=\"logo-headline\"]/div[2]"));
+        System.out.println(przepisy.getText());
 
 //        driver.quit();
     }
