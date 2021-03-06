@@ -28,6 +28,8 @@ public class AdvancedTests {
     public void SeleniumBasicTest1() throws InterruptedException {
         driver.get("https://aniagotuje.pl/");
 
+        Assertions.assertEquals("Tomek", driver.getTitle(), "Tytul to nie Tomek");
+
 
 
 
