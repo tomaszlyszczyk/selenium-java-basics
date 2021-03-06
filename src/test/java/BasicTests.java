@@ -20,18 +20,23 @@ public class BasicTests {
         ChromeDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
 
-        driver.navigate().to("https://aniagotuje.pl/");
+//        driver.navigate().to("https://aniagotuje.pl/");
+//
+//        WebElement tytul = driver.findElement(By.className("logo-caption"));
+//        String s = tytul.getText();
+//        System.out.println(s);
+//
+//        WebElement przepisy = driver.findElement(By.xpath("//*[@id=\"logo-headline\"]/div[2]"));
+//        System.out.println(przepisy.getText());
+//
+//
+//        WebElement tytulzlinku = driver.findElement();
+//        String abc = tytulzlinku.getAttribute();
+//        System.out.println(abc);
 
-        WebElement tytul = driver.findElement(By.className("logo-caption"));
-        String s = tytul.getText();
-        System.out.println(s);
+        driver.get("http://formy-project.herokuapp.com/form");
+        // zloklalizowanie pol na imie, nazwisko i prace
 
-        WebElement przepisy = driver.findElement(By.xpath("//*[@id=\"logo-headline\"]/div[2]"));
-        System.out.println(przepisy.getText());
-
-        WebElement tytulzlinku = driver.findElement();
-        String abc = tytulzlinku.getAttribute();
-        System.out.println(abc);
 
 
 
